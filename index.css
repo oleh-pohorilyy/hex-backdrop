@@ -1,0 +1,76 @@
+*, *::after, *::before {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background: #000000;
+	overflow: hidden;
+
+	font-family: Segoe UI, sans-serif;
+	font-size: 16px;
+
+	cursor: none;
+}
+
+#root {
+	position: relative;
+	height: 100%;
+}
+
+#gradient .stop1 {
+	stop-color: #161616;
+}
+
+#gradient .stop2 {
+	stop-color: #111111;
+}
+
+@keyframes colorRotation {
+	0% { background: radial-gradient(circle at 50%, hsl(0deg, 100%, 50%) 10%, transparent 70%); }
+	5% { background: radial-gradient(circle at 50%, hsl(17deg, 100%, 50%) 10%, transparent 70%); }
+	10% { background: radial-gradient(circle at 50%, hsl(35deg, 100%, 50%) 10%, transparent 70%); }
+	15% { background: radial-gradient(circle at 50%, hsl(53deg, 100%, 50%) 10%, transparent 70%); }
+	20% { background: radial-gradient(circle at 50%, hsl(71deg, 100%, 50%) 10%, transparent 70%); }
+	25% { background: radial-gradient(circle at 50%, hsl(89deg, 100%, 50%) 10%, transparent 70%); }
+	30% { background: radial-gradient(circle at 50%, hsl(107deg, 100%, 50%) 10%, transparent 70%); }
+	35% { background: radial-gradient(circle at 50%, hsl(125deg, 100%, 50%) 10%, transparent 70%); }
+	40% { background: radial-gradient(circle at 50%, hsl(143deg, 100%, 50%) 10%, transparent 70%); }
+	45% { background: radial-gradient(circle at 50%, hsl(161deg, 100%, 50%) 10%, transparent 70%); }
+	50% { background: radial-gradient(circle at 50%, hsl(179deg, 100%, 50%) 10%, transparent 70%); }
+	55% { background: radial-gradient(circle at 50%, hsl(197deg, 100%, 50%) 10%, transparent 70%); }
+	60% { background: radial-gradient(circle at 50%, hsl(215deg, 100%, 50%) 10%, transparent 70%); }
+	65% { background: radial-gradient(circle at 50%, hsl(233deg, 100%, 50%) 10%, transparent 70%); }
+	70% { background: radial-gradient(circle at 50%, hsl(251deg, 100%, 50%) 10%, transparent 70%); }
+	75% { background: radial-gradient(circle at 50%, hsl(269deg, 100%, 50%) 10%, transparent 70%); }
+	80% { background: radial-gradient(circle at 50%, hsl(287deg, 100%, 50%) 10%, transparent 70%); }
+	85% { background: radial-gradient(circle at 50%, hsl(305deg, 100%, 50%) 10%, transparent 70%); }
+	90% { background: radial-gradient(circle at 50%, hsl(323deg, 100%, 50%) 10%, transparent 70%); }
+	95% { background: radial-gradient(circle at 50%, hsl(341deg, 100%, 50%) 10%, transparent 70%); }
+	100% { background: radial-gradient(circle at 50%, hsl(359deg, 100%, 50%) 10%, transparent 70%); }
+}
+
+#mouse {
+	width: 700px;
+	height: 700px;
+
+	position: absolute;
+	top: 0;
+	z-index: -1;
+
+	cursor: none;
+
+	background: radial-gradient(circle at 50%, hsl(0deg, 100%, 50%) 10%, transparent 70%);
+
+	animation-name: colorRotation;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-delay: 0;
+	animation-direction: alternate;
+}
